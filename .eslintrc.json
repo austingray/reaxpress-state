@@ -1,9 +1,12 @@
 {
   "extends": "airbnb",
   "env": {
-    "browser": true
+    "browser": true,
+    "jest/globals": true
   },
+  "parser": "babel-eslint",
+  "plugins": ["jest"],
   "rules": {
-    "react/prefer-stateless-function": "off"
+    "no-underscore-dangle": "off"
   }
 }
