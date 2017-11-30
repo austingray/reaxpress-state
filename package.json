@@ -1,6 +1,6 @@
 {
   "name": "reaxpress-state",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple state management library for React",
   "main": "build/index.js",
   "scripts": {
