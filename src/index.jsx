@@ -1,4 +1,3 @@
-/* eslint no-underscore-dangle: off, react/no-unused-state: off */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -12,9 +11,6 @@ function ReaxpressState(ReaxpressComponent) {
 
       // defaults
       this.mounted = false;
-      this.state = {
-        state: {},
-      };
 
       // if __REAXPRESS__STATE__ has not been defined yet
       if (typeof window !== 'undefined' && typeof window.__REAXPRESS_STATE__ === 'undefined') {
@@ -92,6 +88,14 @@ function ReaxpressState(ReaxpressComponent) {
       return <ReaxpressComponent {...this.props} state={state} />;
     }
   }
+
+  ReaxpressWrapper.defaultProps = {
+    state: {},
+  };
+
+  ReaxpressWrapper.propTypes = {
+    state: PropTypes.node,
+  };
 
   ReaxpressWrapper.contextTypes = {
     state: PropTypes.object,

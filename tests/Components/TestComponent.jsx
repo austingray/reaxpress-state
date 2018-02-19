@@ -6,7 +6,7 @@ import ReaxpressState from '../../src/index';
 class TestComponent extends React.Component {
   updateGlobalState(color) {
     window.__REAXPRESS_STATE__.update({
-      color: color,
+      color,
     });
   }
   render() {
@@ -17,14 +17,10 @@ class TestComponent extends React.Component {
   }
 }
 
-TestComponent.defaultProps = {
-  state: {},
-};
-
 TestComponent.propTypes = {
   state: PropTypes.shape({
     color: PropTypes.string,
-  }),
+  }).isRequired,
 };
 
 export default TestComponent;
